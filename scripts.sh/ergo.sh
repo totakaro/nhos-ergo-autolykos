@@ -6,6 +6,13 @@
 
 # WARNING: Need to stop your rig manually on Nicehash App or website first
 
+# Makes sure this script is executed manually
+if ! [ -f /tmp/ergo.pid ]; then
+  touch /tmp/ergo.pid
+  echo "First time execution. Please execute it again"
+  exit 1
+fi
+
 # Check root https://stackoverflow.com/a/18216122
 if [ `id -u` -ne 0 ]; then
   echo "Please run as root"
