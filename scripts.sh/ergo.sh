@@ -31,4 +31,6 @@ ERGO
 
 chmod +x /opt/nbminer/nbminer
 
-# Remember to start your rig on Nicehash Web or App
+echo "Done!"
+echo "Remember to start your rig on Nicehash Web or App"
+
