@@ -31,8 +31,13 @@ fi
 
 cat <<-'ERGO' > /opt/nbminer/nbminer
 #!/bin/sh
-BTC=xxxxxxxxxxxxxxxxxxxxxxxx # Setup your address here
-LOCATION=usa-east # Setup your location: eu-north eu-west usa-east or usa-west https://www.nicehash.com/blog/post/new-mining-locations-are-now-available
+
+# Setup your address here
+BTC=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# Setup your location here: eu-north, eu-west, usa-east or usa-west https://www.nicehash.com/blog/post/new-mining-locations-are-now-available
+LOCATION=usa-east
+
 /opt/nbminer/nbminer.exe -a ergo -o stratum+tcp://autolykos.$LOCATION.nicehash.com:3390 -u $BTC\$$HOSTNAME --no-watchdog --api 127.0.0.1:4000
 ERGO
 
