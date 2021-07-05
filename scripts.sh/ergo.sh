@@ -20,7 +20,7 @@ if [ `id -u` -ne 0 ]; then
 fi
 
 # Check if miner is running (please stop your rig first on Nicehash Web or App manually)
-if pgrep -x "nbminer" > /dev/null; then
+if pgrep -x "/opt/nbminer/nbminer" > /dev/null; then
   echo "Miner is running, stop it first on nicehash web or app"
   exit 1
 fi
